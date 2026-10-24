@@ -1,8 +1,11 @@
-experimento,commit_fallo,control_esperado,control_observado,regla_aviso,archivo_paquete,package_estado,correccion,commit_corregido,enlace_ejecucion,reporte
-Linea base,,todos,,,,,,,,
-Lint,,lint,,,,,,,,
-Pruebas,,tests,,,,,,,,
-SAST,,sast,,,,,,,,
-Secretos,,secrets,,,,,,,,
-SCA,,sca,,,,,,,,
-Final,,todos,,,,,,,,
+experimento;commit_fallo;control_esperado;control_observado;regla_aviso;archivo_paquete;package_estado;correccion;commit_corregido;enlace_ejecucion;reporte;;;;;;;;;;;;
+Linea base;119e963;todos en verde;N/A;N/A;N/A;N/A;N/A;N/A;https://github.com/valeria398/lab3/actions/runs/40051681891;;;;;;;;;;;;;
+Lint;e2d97a2;lint;lint;app/calculadora.py:1:8;omitido;omitido;se elimina import os;2d604b7;fallo init · valeria398/lab3@e2d97a2;reporte-lint;;;;;;;;;;;;
+Pruebas;7b7f33d;tests;test;test_suma (assert -1 == 5);test/test_calculadora.py:7/app/calculadora.py(sumar);omitido;se restaura return a + b;"
+1b9bf84";cambiar signo · valeria398/lab3@7b7f33d;report-test;;;;;;;;;;;;
+SAST;62c0650;sast;sast;"(eval; Medium/High; CWE-78)";app/calculadora.py:9:11;omitido;Se elimina la funcion ejemplo_inseguro completa;630bb61;añadir funcion · valeria398/lab3@62c0650;report-sast;;;;;;;;;;;;
+Secretos;"
+3708ce2";secrets;secrets;cloud-forge-demo (HIGH);app/demo.env:1;omitido;Se elimina app/demo.env;fae1d48;crear demo.env · valeria398/lab3@3708ce2;"report-secrets
+";;;;;;;;;;;;
+SCA;674ff94;sca;sca;CVE-2018-18074 (HIGH);requests==2.19.1 (corregida en 2.20.0);omitido;Se elimina la dependencia innecesaria;4d38dfe;añadir request · valeria398/lab3@674ff94;report-sca;;;;;;;;;;;;
+Final;4d38dfe;todos en verde;N/A;N/A;N/A;N/A;N/A;4d38dfe;eliminar request · valeria398/lab3@4d38dfe;N/A;;;;;;;;;;;;
